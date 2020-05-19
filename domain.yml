@@ -6,9 +6,12 @@ intents:
 - greet
 - goodbye
 - thankyou
+- search_transactions
+- check_balance
 
 entities:
 - PERSON
+- vendor_name
 
 slots:
   PERSON:
@@ -20,7 +23,7 @@ slots:
 
 responses:
   utter_found_spend_transactions:
-    - text: 'I found {numtransacts} transactions{vendor_name} totalling ${total}'
+    - text: 'I found {numtransacts} transactions {vendor_name} totalling ${total}'
   utter_no_vendor_name:
     - text: Sorry, that's not a recognized vendor.
   utter_goodbye:
